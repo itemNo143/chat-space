@@ -2,13 +2,13 @@
   .LeftHeader
     .LeftHeader__list
       %h3.LeftHeader__userName
-        小島一輝
+        = current_user.name
       %ul.LeftHeader__iconList
         %li.LeftHeader__Icon
           = link_to "#" do
             = icon('far', 'edit', class: "LeftHeader__Icon--a")
         %li.LeftHeader__Icon
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: "LeftHeader__Icon--a")
   .GroupList
     .Group
