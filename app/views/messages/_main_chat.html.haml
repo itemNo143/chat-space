@@ -1,1 +1,38 @@
-＜チャット画面＞
+.Chat
+  .RightHeader
+    .RightHeader__group
+      .RightHeader__groupName
+        techcamp
+      %ul.RightHeader__memberList
+        Member：
+        %li.RightHeader__member
+          小島一輝
+    = link_to "#", class: "RightHeader__editButton" do
+      Edit
+  .MessageField
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__userName
+          小島一輝
+        .MessageInfo__date
+          2020年1月1日 0時02分
+      .Message
+        %p.Message__content
+          ことよろ
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__userName
+          小島一輝
+        .MessageInfo__date
+          2020年1月1日 0時01分
+      .Message
+        %p.Message__content
+          あけおめ
+  .Footer
+    %form.Form
+      .Form__contents
+        %input{type: "text", class: "Form__inputContent", placeholder: "type a message"}
+        %label.Form__inputImage
+          = icon('far', 'image', class: "Form-icon")
+          %input{type:"file", class: "Form__inputImage__file"}
+      %input{type: "submit", value: "Send", class: "Form__submit"}
