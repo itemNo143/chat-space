@@ -1,0 +1,25 @@
+.SideBar
+  .LeftHeader
+    .LeftHeader__list
+      %h3.LeftHeader__userName
+        小島一輝
+      %ul.LeftHeader__iconList
+        %li.LeftHeader__Icon
+          = link_to "#" do
+            = icon('far', 'edit', class: "LeftHeader__Icon--a")
+        %li.LeftHeader__Icon
+          = link_to "#" do
+            = icon('fas', 'cog', class: "LeftHeader__Icon--a")
+  .GroupList
+    .Group
+      = link_to "#", class: "Group--a" do
+        .Group__name
+          techcamp
+        .Group__message
+          まだメッセージがありません
+    .Group
+      = link_to "#", class: "Group--a" do
+        .Group__name
+          test
+        .Group__message
+          まだメッセージがありません
