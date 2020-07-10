@@ -2,169 +2,169 @@
   box-sizing: border-box;
 }
 
-@mixin b-c_h_p($background-color, $height, $padding){
+@mixin b-c_h_p($background-color, $height, $padding) {
   background-color: $background-color;
   height: $height;
   padding: $padding;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
 }
 
-.SideBar{
+.SideBar {
   width: 300px;
   color: #ffffff;
 }
 
-    .LeftHeader{
-      @include b-c_h_p(#253141, 100px, 0 20px);
-      display: flex;
-      align-items: center;
-      &__list{
-        height: 20px;
-        width: 260px;
-        display: flex;
-        justify-content: space-between;
-      }
-        &__userName{
-          font-size: 16px;
-          font-weight: bold;
-        }
-        &__iconList{
-          display: flex;
-          justify-content: end;
-        }
-          &__Icon{
-            margin-left: 5px;
-            &--a{
-              color: #ffffff;
-            }
-          }
+.LeftHeader {
+  @include b-c_h_p(#253141, 100px, 0 20px);
+  display: flex;
+  align-items: center;
+  &__list {
+    height: 20px;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__userName {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__iconList {
+    display: flex;
+    justify-content: end;
+  }
+  &__Icon {
+    margin-left: 5px;
+    &--a {
+      color: #ffffff;
     }
+  }
+}
 
-    .GroupList{
-      @include b-c_h_p(#2f3e51, calc(100vh - 100px), 0 20px);
-      overflow: auto;
-    }
+.GroupList {
+  @include b-c_h_p(#2f3e51, calc(100vh - 100px), 0 20px);
+  overflow: auto;
+}
 
-        .Group{
-          padding: 20px 0 40px 0;
-            &--a{
-              color: #ffffff;
-              text-decoration: none;
-            }
-              &__name{
-                font-size: 15px;
-              }
-              &__message{
-                font-size: 11px;
-                margin-top: 5px;
-              }
-        }
+.Group {
+  padding: 20px 0 40px 0;
+  &--a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &__name {
+    font-size: 15px;
+  }
+  &__message {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+}
 
-.Chat{
+.Chat {
   width: calc(100vw - 300px);
 }
 
-    .RightHeader{
-      @include b-c_h_p(#ffffff, 100px, 0 40px);
-      border-bottom: solid 1px #eeeeee;
-      display: flex;
-      justify-content: space-between;
-        &__groupName{
-          color: #333333;
-          font-size: 20px;
-          margin-top: 35px;
-        }
-        &__memberList{
-          color: #999999;
-          font-size: 12px;
-          margin-top: 15px;
-          display: flex;
-          list-style: none;
-        }
-          &__member{
-            padding-right: 5px;
-          }
-      &__editButton{
-        display: block;
-        color: #38aef0;
-        border: 1px solid #38aef0;
-        height: 40px;
-        padding: 0 20px;
-        margin-top: 28px;
-        line-height: 40px;
-        text-decoration: none;
-      }
+.RightHeader {
+  @include b-c_h_p(#ffffff, 100px, 0 40px);
+  border-bottom: solid 1px #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  &__groupName {
+    color: #333333;
+    font-size: 20px;
+    margin-top: 35px;
+  }
+  &__memberList {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 15px;
+    display: flex;
+    list-style: none;
+  }
+  &__member {
+    padding-right: 5px;
+  }
+  &__editButton {
+    display: block;
+    color: #38aef0;
+    border: 1px solid #38aef0;
+    height: 40px;
+    padding: 0 20px;
+    margin-top: 28px;
+    line-height: 40px;
+    text-decoration: none;
+  }
+}
+
+.MessageField {
+  @include b-c_h_p(#fafafa, calc(100vh - 100px - 90px), 35px 40px 0 40px);
+  overflow: auto;
+}
+
+.MessageBox {
+  margin-bottom: 46px;
+}
+
+.MessageInfo {
+  display: flex;
+  &__userName {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__date {
+    color: #999999;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+}
+
+.Message {
+  margin-top: 12px;
+  &__content {
+    color: #434a54;
+    font-size: 14px;
+  }
+}
+
+.Footer {
+  @include b-c_h_p(#d2d2d2, 90px, 20px 40px 20px 40px);
+}
+
+.Form {
+  display: flex;
+  justify-content: space-between;
+  &__contents {
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+  }
+  &__inputContent {
+    height: 50px;
+    width: 100%;
+    padding: 0 45px 0 10px;
+    border: none;
+  }
+  &__inputImage {
+    height: 50px;
+    right: 10px;
+    position: absolute;
+    .Form-icon {
+      line-height: 50px;
+      font-size: 25px;
     }
-
-    .MessageField{
-      @include b-c_h_p(#fafafa, calc(100vh - 100px - 90px), 35px 40px 0 40px);
-      overflow: auto;
+    &__file {
+      display: none;
     }
-
-        .MessageBox{
-          margin-bottom: 46px;
-        }
-
-            .MessageInfo{
-              display: flex;
-              &__userName{
-                color: #333333;
-                font-size: 16px;
-                font-weight: bold;
-              }
-              &__date{
-                color: #999999;
-                font-size: 12px;
-                padding-left: 10px;
-              }
-            }
-
-            .Message{
-              margin-top: 12px;
-              &__content{
-                color: #434a54;
-                font-size: 14px;
-              }
-            }
-
-    .Footer{
-      @include b-c_h_p(#d2d2d2, 90px, 20px 40px 20px 40px);
-    }
-
-      .Form{
-        display: flex;
-        justify-content: space-between;
-        &__contents{
-          width: 100%;
-          background-color: #ffffff;
-          position: relative;
-        }
-          &__inputContent{
-            height: 50px;
-            width: 100%;
-            padding: 0 45px 0 10px;
-            border: none;
-          }
-          &__inputImage{
-            height: 50px;
-            right: 10px;
-            position: absolute;
-            .Form-icon{
-              line-height: 50px;
-              font-size: 25px;
-            }
-            &__file{
-              display: none;
-            }
-          }
-        &__submit{
-          @include b-c_h_p(#38aef0, 50px, 0 30px);
-          border: none;
-          color: #ffffff;
-          font-size: 16px;
-          margin-left: 15px;
-        }
-      }
+  }
+  &__submit {
+    @include b-c_h_p(#38aef0, 50px, 0 30px);
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 15px;
+  }
+}
